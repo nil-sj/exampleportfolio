@@ -368,12 +368,162 @@ section#projects {
 
 section#contact {
   background-color: #dbf3fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contact-container {
+  width: 800px;
+  max-width: 90%;
+  padding: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.full {
+  width: 100%;
+  float: left;
+  padding: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  color: #03254c;
+	border: 2px solid #007bff;
+	width: 100%;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1167b1;
+  background-color: #dbf3fa;
+}
+
+input:hover {
+  outline: none;
+  border-color: #1167b1;
+  background-color: #dbf3fa;
+}
+
+textarea {
+  height: 150px;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  color: #03254c;
+	border: 2px solid #007bff;
+  border-radius: 4px;
+	width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #1167b1;
+  background-color: #dbf3fa;
+}
+
+textarea:hover {
+  outline: none;
+  border-color: #1167b1;
+  background-color: #dbf3fa;
+}
+
+.submit-button {
+  cursor: pointer;
+	background-color: #46A8E3;
+	border: none;
+  border-radius: 4px;
+	color: #ffffff;
+	padding: 12px 0;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.submit-button:hover{
+  background-color: #7dc2eb;
 }
 
 footer {
   background-color: #03254c;
   color: #187bcd;
-  /* hover color: #d0efff; */
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profiles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #187bcd;
+  text-decoration: none;
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  fill: #187bcd;
+}
+
+.profile-link:hover {
+  color: #d0efff;
+}
+
+.profile-link:hover .footer-icon {
+  fill: #d0efff;
+}
+
+
+.white {
+  color: #ffffff;
+  margin: 0 1rem;
+}
+
+.credits {
+  margin: 2rem 0;
+}
+
+.footer-text-links {
+  color: #187bcd;
+  text-decoration: none;
+}
+
+.footer-text-links:hover {
+  color: #2a9df4;
+}
+
+.credits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.white-bar {
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
@@ -483,5 +633,12 @@ footer {
     height: 258px;
   }
 
+  .credits {
+    flex-direction: column;
+  }
+
+  .largescreen-only {
+    display: none;
+  }
 
 }

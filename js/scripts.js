@@ -44,3 +44,8 @@ document.querySelectorAll(".arrow").forEach(img => {
     e.target.src = "img/white-arrow.png";
   });
 });
+
+const today = new Date();
+const year = today.getFullYear();
+
+document.querySelector(".year").textContent = year;
