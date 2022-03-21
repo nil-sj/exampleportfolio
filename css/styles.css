@@ -20,6 +20,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 3;
 }
 
 .navbar {
@@ -169,6 +170,212 @@ section#welcome-section {
   }
 }
 
+section#about {
+  min-height: 100vh;
+  background-color: #9fd2e2;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.about-icon {
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  background-color: #b7e9f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon:hover {
+  background-color: #dbf3fa;
+  cursor: pointer;
+}
+
+.coding-icon {
+  width: 100px;
+  height: auto;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0 2.5rem 0;
+}
+
+.about-para {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+}
+
+.hobbies-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-sub-icon {
+  height: 6rem;
+  width: 6rem;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  background-color: #b7e9f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-icon {
+  height: 4rem;
+  width: auto;
+}
+
+
+section#projects {
+  background-color: #f5fcff;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container{
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-row: auto auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.project-tile {
+  background-color: yellow;
+  width: 400px;
+  height: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px hsla(217, 19%, 35%, 0.2);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+}
+
+.project-tile:hover{
+  box-shadow: none;
+  outline: 6px solid white;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-image {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.img-overlay-blur {
+  backdrop-filter: blur(5px);
+}
+
+.img-overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.img-overlay:hover {
+  opacity: 1;
+}
+
+.img-overlay:hover > * {
+  transform: translateY(0);
+}
+
+.overlay-heading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.overlay-description {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.overlay-tags {
+  font-weight: 300;
+  font-size: 0.8rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  margin-bottom: 0.2rem;
+  margin-right: 0.2rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.overlay-btn {
+  margin-top: 1rem;
+}
+
+.arrow {
+  width: 2rem;
+  height: 2rem;
+}
+
+.overlay-btn:hover {
+  color: rgb(255, 77, 0);
+}
+
+
+section#contact {
+  background-color: #dbf3fa;
+}
+
+footer {
+  background-color: #03254c;
+  color: #187bcd;
+  /* hover color: #d0efff; */
+}
+
 @media only screen and (max-width: 768px) {
   .hamburger{
     display: block;
@@ -235,5 +442,46 @@ section#welcome-section {
   .welcome-para {
     font-size: 1rem;
   }
+
+  section#about {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-para {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hobbies-div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  section#projects {
+    padding: 5rem 0.5rem;
+  }
+
+  .project-container{
+    display: grid;
+    grid-template-columns: 344px;
+    grid-row: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+
+  .project-tile {
+    width: 344px;
+    height: 258px;
+  }
+
 
 }

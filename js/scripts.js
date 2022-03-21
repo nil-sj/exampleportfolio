@@ -35,3 +35,12 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+document.querySelectorAll(".arrow").forEach(img => {
+  img.addEventListener("mouseover", (e) => {
+    e.target.src = "img/blue-arrow.png";
+  });
+  img.addEventListener("mouseout", (e) => {
+    e.target.src = "img/white-arrow.png";
+  });
+});
