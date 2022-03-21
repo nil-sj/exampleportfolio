@@ -6,13 +6,19 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
 }
 
 header {
   background-color: #007bff;
-  color: #ffffff;
+  position: sticky;
+  top: 0;
 }
 
 .navbar {
@@ -77,6 +83,19 @@ nav li {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #9fd2e2;
+}
+
+section {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#welcome-section {
+  height: 100vh;
+  background-color: green;
 }
 
 @media only screen and (max-width: 768px) {
