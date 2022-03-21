@@ -101,7 +101,7 @@ nav li {
     gap: 0;
     flex-direction: column;
     background-color: #9fd2e2;
-    width: 90%;
+    width: 96%;
     text-align: center;
     transition: 0.3s;
   }
@@ -111,6 +111,16 @@ nav li {
   }
 
   .nav-menu.active{
-    left: 0;
+    left: 2%;
+    top: 4rem;
   }
+
+  .nav-link {
+    color: #007bff;
+  }
+
+  .nav-link.active {
+    color: #ffffff;
+  }
+
 }
